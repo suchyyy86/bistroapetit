@@ -9,7 +9,9 @@ function NotFoundComponent() {
     <div className="flex min-h-[60vh] items-center justify-center px-4 py-24">
       <div className="max-w-md text-center">
         <h1 className="font-display text-8xl font-bold text-primary">404</h1>
-        <h2 className="mt-4 font-display text-2xl font-semibold text-foreground">Stránka nenalezena</h2>
+        <h2 className="mt-4 font-display text-2xl font-semibold text-foreground">
+          Stránka nenalezena
+        </h2>
         <p className="mt-2 text-muted-foreground">
           Hledaná stránka neexistuje nebo byla přesunuta.
         </p>
@@ -32,10 +34,18 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Bistro Apetit — Domácí kuchyně, Český Těšín" },
-      { name: "description", content: "Rodinné bistro v Českém Těšíně. Domácí denní menu, rozvoz po městě zdarma nad 100 Kč. Vaříme s láskou od roku 1994." },
+      {
+        name: "description",
+        content:
+          "Rodinné bistro v Českém Těšíně. Domácí denní menu, rozvoz po městě zdarma nad 100 Kč. Vaříme s láskou od roku 1994.",
+      },
       { name: "author", content: "Bistro Apetit" },
       { property: "og:title", content: "Bistro Apetit — Domácí kuchyně, Český Těšín" },
-      { property: "og:description", content: "Rodinné bistro Za kolejama. Denní menu, rozvoz po Českém Těšíně. Tradice od roku 1994." },
+      {
+        property: "og:description",
+        content:
+          "Rodinné bistro Za kolejama. Denní menu, rozvoz po Českém Těšíně. Tradice od roku 1994.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "cs_CZ" },
       { name: "twitter:card", content: "summary" },
