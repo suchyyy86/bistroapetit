@@ -8,7 +8,7 @@ export const Route = createFileRoute("/kontakt")({
       {
         name: "description",
         content:
-          "Kontakt na Bistro Apetit v Českém Těšíně. Telefon 777 808 071, e-mail bistroapetit@seznam.cz. Najdete nás u nákladního nádraží.",
+          "Kontakt na Bistro Apetit v Českém Těšíně. Telefon 777 808 071, e-mail bistroapetit@seznam.cz. Najdete nás na adrese Bistro Apetit, areál ČD, 737 01 Český Těšín.",
       },
       { property: "og:title", content: "Kontakt — Bistro Apetit" },
       {
@@ -55,7 +55,7 @@ function ContactPage() {
                 <p className="mt-1 font-display text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                   777 808 071
                 </p>
-                <p className="text-sm text-muted-foreground mt-1">Objednávky do 10:00</p>
+                <p className="text-sm text-muted-foreground mt-1">Objednávky do 11:00</p>
               </div>
             </a>
 
@@ -84,10 +84,9 @@ function ContactPage() {
                 <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
                   Adresa
                 </p>
-                <p className="mt-1 font-display text-xl font-bold text-foreground">
-                  Nákladní nádraží
-                </p>
-                <p className="text-foreground/70">Český Těšín</p>
+                <p className="mt-1 font-display text-xl font-bold text-foreground">Bistro Apetit</p>
+                <p className="text-foreground/70">areál ČD</p>
+                <p className="text-foreground/70">737 01 Český Těšín</p>
               </div>
             </div>
 

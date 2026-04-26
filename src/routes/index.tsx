@@ -1,15 +1,31 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
-import { Phone, Clock, MapPin, Truck, CreditCard, UtensilsCrossed, ArrowRight, Heart } from "lucide-react";
+import {
+  Phone,
+  Clock,
+  MapPin,
+  Truck,
+  CreditCard,
+  UtensilsCrossed,
+  ArrowRight,
+  Heart,
+} from "lucide-react";
 import heroFood from "@/assets/hero-food.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Bistro Apetit — Domácí kuchyně v Českém Těšíně od roku 1994" },
-      { name: "description", content: "Rodinné bistro Za kolejama v Českém Těšíně. Denní menu, rozvoz po městě zdarma nad 100 Kč, platba kartou. Vaříme s láskou už 30 let." },
+      {
+        name: "description",
+        content:
+          "Rodinné bistro Za kolejama v Českém Těšíně. Denní menu, rozvoz po městě zdarma nad 100 Kč, platba kartou. Vaříme s láskou už 30 let.",
+      },
       { property: "og:title", content: "Bistro Apetit — Domácí kuchyně v Českém Těšíně" },
-      { property: "og:description", content: "Rodinné bistro s tradicí od roku 1994. Denní menu a rozvoz po Českém Těšíně." },
+      {
+        property: "og:description",
+        content: "Rodinné bistro s tradicí od roku 1994. Denní menu a rozvoz po Českém Těšíně.",
+      },
     ],
   }),
   component: Index,
@@ -21,7 +37,11 @@ function Index() {
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroFood} alt="Domácí česká jídla z Bistra Apetit" className="h-full w-full object-cover" />
+          <img
+            src={heroFood}
+            alt="Domácí česká jídla z Bistra Apetit"
+            className="h-full w-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-foreground/30" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 text-background">
@@ -30,12 +50,13 @@ function Index() {
               <Heart className="h-3.5 w-3.5" /> Rodinné bistro od roku 1994
             </span>
             <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-background">
-              Domácí kuchyně<br />
+              Domácí kuchyně
+              <br />
               <span className="italic text-background/90">„Za kolejama"</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-background/85 max-w-xl leading-relaxed">
-              Vaříme poctivě, jako doma. Denní menu, rozvoz po Českém Těšíně
-              a 30 let zkušeností v každém talíři.
+              Vaříme poctivě, jako doma. Denní menu, rozvoz po Českém Těšíně a 30 let zkušeností v
+              každém talíři.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link
@@ -62,7 +83,7 @@ function Index() {
             { icon: Clock, title: "Po–Pá", desc: "8:00 — 13:00" },
             { icon: Truck, title: "Rozvoz", desc: "Zdarma nad 100 Kč" },
             { icon: CreditCard, title: "Platba", desc: "Hotově i kartou" },
-            { icon: Phone, title: "Objednávky", desc: "do 10:00 hod" },
+            { icon: Phone, title: "Objednávky", desc: "do 11:00" },
           ].map(({ icon: Icon, title, desc }) => (
             <div key={title} className="flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 text-primary shrink-0">
@@ -81,27 +102,26 @@ function Index() {
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-sm font-semibold tracking-widest uppercase text-accent">Náš příběh</span>
+            <span className="text-sm font-semibold tracking-widest uppercase text-accent">
+              Náš příběh
+            </span>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl font-bold text-foreground leading-tight">
               Tři dekády domácí kuchyně v Českém Těšíně
             </h2>
             <div className="mt-6 space-y-4 text-foreground/80 leading-relaxed">
               <p>
-                V roce <strong className="text-foreground">1994</strong> jsme jako malý rodinný podnik
-                specializovaný na domácí kuchyni začali v prostorech na Moskevské ulici v Českém
-                Těšíně, poblíž náměstí, prodávat různé druhy jídel.
+                V roce <strong className="text-foreground">1994</strong> jsme jako malý rodinný
+                podnik specializovaný na domácí kuchyni začali v prostorech na Moskevské ulici v
+                Českém Těšíně, poblíž náměstí, prodávat různé druhy jídel.
               </p>
               <p>
                 Postupem času bylo třeba vařit více. Začaly nás vyhledávat firmy, které chtěly,
-                abychom jim vařili. A tak jsme se v listopadu roku <strong className="text-foreground">2006</strong> přemístili
-                na nákladní nádraží, kde pro nás byly lepší podmínky a hlavně větší kuchyně.
+                abychom jim vařili. A tak jsme se v listopadu roku{" "}
+                <strong className="text-foreground">2006</strong> přemístili na nákladní nádraží,
+                kde pro nás byly lepší podmínky a hlavně větší kuchyně.
               </p>
-              <p>
-                Většině firem vaříme s radostí dodnes, tak jako našim stálým zákazníkům.
-              </p>
-              <p className="font-display italic text-lg text-primary pt-2">
-                Vaše Bistro Apetit
-              </p>
+              <p>Většině firem vaříme s radostí dodnes, tak jako našim stálým zákazníkům.</p>
+              <p className="font-display italic text-lg text-primary pt-2">Vaše Bistro Apetit</p>
             </div>
           </div>
           <div className="relative">
@@ -124,10 +144,12 @@ function Index() {
       <section className="bg-foreground text-background py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
           <UtensilsCrossed className="mx-auto h-10 w-10 text-accent" />
-          <h2 className="mt-6 font-display text-3xl sm:text-4xl font-bold">Denní menu na každý den</h2>
+          <h2 className="mt-6 font-display text-3xl sm:text-4xl font-bold">
+            Denní menu na každý den
+          </h2>
           <p className="mt-4 text-background/80 max-w-2xl mx-auto leading-relaxed">
-            Aktuální menu je vždy připraveno na portálu Meníčka.cz. Doporučujeme objednat
-            předem telefonicky do <strong className="text-background">10:00</strong>, jídel se vaří jen
+            Aktuální menu je vždy připraveno na portálu Meníčka.cz. Doporučujeme objednat předem
+            telefonicky do <strong className="text-background">11:00</strong>, jídel se vaří jen
             omezené množství.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -151,8 +173,12 @@ function Index() {
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-sm font-semibold tracking-widest uppercase text-accent">Praktické info</span>
-            <h2 className="mt-3 font-display text-4xl font-bold text-foreground">Kdykoliv k službám</h2>
+            <span className="text-sm font-semibold tracking-widest uppercase text-accent">
+              Praktické info
+            </span>
+            <h2 className="mt-3 font-display text-4xl font-bold text-foreground">
+              Kdykoliv k službám
+            </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -173,7 +199,7 @@ function Index() {
               {
                 icon: MapPin,
                 title: "Najdete nás",
-                lines: ["Nákladní nádraží", "Český Těšín"],
+                lines: ["Bistro Apetit", "areál ČD", "737 01 Český Těšín"],
                 to: "/kontakt" as const,
                 cta: "Mapa a kontakt",
               },
@@ -185,9 +211,13 @@ function Index() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                   <Icon className="h-7 w-7" />
                 </div>
-                <h3 className="mt-5 font-display text-2xl font-semibold text-foreground">{title}</h3>
+                <h3 className="mt-5 font-display text-2xl font-semibold text-foreground">
+                  {title}
+                </h3>
                 <ul className="mt-3 space-y-1 text-foreground/75">
-                  {lines.map((l) => <li key={l}>{l}</li>)}
+                  {lines.map((l) => (
+                    <li key={l}>{l}</li>
+                  ))}
                 </ul>
                 <Link
                   to={to}

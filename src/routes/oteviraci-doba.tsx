@@ -6,9 +6,13 @@ export const Route = createFileRoute("/oteviraci-doba")({
   head: () => ({
     meta: [
       { title: "Otevírací doba — Bistro Apetit, Český Těšín" },
-      { name: "description", content: "Otevírací doba Bistra Apetit: pondělí až pátek 8:00–13:00. O víkendech a svátcích zavřeno." },
+      {
+        name: "description",
+        content:
+          "Otevírací doba Bistra Apetit: pondělí až pátek 8:00–13:00. O víkendech a svátcích zavřeno.",
+      },
       { property: "og:title", content: "Otevírací doba — Bistro Apetit" },
-      { property: "og:description", content: "Po–Pá 8:00–13:00. Objednávky telefonicky do 10:00." },
+      { property: "og:description", content: "Po–Pá 8:00–13:00. Objednávky telefonicky do 11:00." },
     ],
   }),
   component: HoursPage,
@@ -46,8 +50,12 @@ function HoursPage() {
     <div>
       <section className="bg-secondary/40 border-b border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <span className="text-sm font-semibold tracking-widest uppercase text-accent">Kdy máme otevřeno</span>
-          <h1 className="mt-3 font-display text-5xl sm:text-6xl font-bold text-foreground">Otevírací doba</h1>
+          <span className="text-sm font-semibold tracking-widest uppercase text-accent">
+            Kdy máme otevřeno
+          </span>
+          <h1 className="mt-3 font-display text-5xl sm:text-6xl font-bold text-foreground">
+            Otevírací doba
+          </h1>
         </div>
       </section>
 
@@ -55,12 +63,16 @@ function HoursPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           {/* Status */}
           {now && (
-            <div className={`flex items-center gap-3 rounded-2xl p-5 mb-8 border ${
-              isOpen
-                ? "bg-emerald-500/10 border-emerald-600/30 text-emerald-900"
-                : "bg-muted border-border text-foreground"
-            }`}>
-              <div className={`h-3 w-3 rounded-full ${isOpen ? "bg-emerald-500 animate-pulse" : "bg-muted-foreground"}`} />
+            <div
+              className={`flex items-center gap-3 rounded-2xl p-5 mb-8 border ${
+                isOpen
+                  ? "bg-emerald-500/10 border-emerald-600/30 text-emerald-900"
+                  : "bg-muted border-border text-foreground"
+              }`}
+            >
+              <div
+                className={`h-3 w-3 rounded-full ${isOpen ? "bg-emerald-500 animate-pulse" : "bg-muted-foreground"}`}
+              />
               <p className="font-semibold">
                 {isOpen ? "Právě teď máme otevřeno" : "Právě teď máme zavřeno"}
               </p>
@@ -80,12 +92,15 @@ function HoursPage() {
                 >
                   <div className="flex items-center gap-3">
                     {isToday && <span className="h-2 w-2 rounded-full bg-primary" />}
-                    <span className={`font-display text-lg ${isToday ? "font-bold text-primary" : "font-semibold text-foreground"}`}>
+                    <span
+                      className={`font-display text-lg ${isToday ? "font-bold text-primary" : "font-semibold text-foreground"}`}
+                    >
                       {d.name}
                     </span>
-                    {isToday && <span className="text-xs uppercase tracking-wider text-primary font-semibold">Dnes</span>}
                   </div>
-                  <span className={`text-base ${d.open ? "text-foreground" : "text-muted-foreground italic"}`}>
+                  <span
+                    className={`text-base ${d.open ? "text-foreground" : "text-muted-foreground italic"}`}
+                  >
                     {d.open ? `${d.open} — ${d.close}` : "Zavřeno"}
                   </span>
                 </div>
@@ -101,13 +116,23 @@ function HoursPage() {
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
             <div className="bg-card border border-border rounded-xl p-6">
               <Phone className="h-6 w-6 text-primary" />
-              <h3 className="mt-3 font-display text-lg font-semibold text-foreground">Objednávky jídla</h3>
-              <p className="mt-1 text-sm text-foreground/70">Telefonicky do <strong>10:00</strong> téhož dne na <a href="tel:777808071" className="text-primary underline">777 808 071</a>.</p>
+              <h3 className="mt-3 font-display text-lg font-semibold text-foreground">
+                Objednávky jídla
+              </h3>
+              <p className="mt-1 text-sm text-foreground/70">
+                Telefonicky do <strong>11:00</strong> téhož dne na{" "}
+                <a href="tel:777808071" className="text-primary underline">
+                  777 808 071
+                </a>
+                .
+              </p>
             </div>
             <div className="bg-card border border-border rounded-xl p-6">
               <Truck className="h-6 w-6 text-primary" />
               <h3 className="mt-3 font-display text-lg font-semibold text-foreground">Rozvoz</h3>
-              <p className="mt-1 text-sm text-foreground/70">Objednávky pro rozvoz po Č. Těšíně do <strong>11:00</strong>.</p>
+              <p className="mt-1 text-sm text-foreground/70">
+                Objednávky pro rozvoz po Č. Těšíně do <strong>11:00</strong>.
+              </p>
             </div>
           </div>
 

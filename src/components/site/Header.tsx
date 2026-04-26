@@ -1,13 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { to: "/", label: "Domů" },
   { to: "/menu", label: "Denní menu" },
   { to: "/oteviraci-doba", label: "Otevírací doba" },
   { to: "/fotogalerie", label: "Fotogalerie" },
-  { to: "/kontakt", label: "Kontakt" },
 ] as const;
 
 export function Header() {
@@ -46,19 +45,20 @@ export function Header() {
                 key={item.to}
                 to={item.to}
                 className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors rounded-md hover:bg-secondary"
-                activeProps={{ className: "px-4 py-2 text-sm font-semibold text-primary rounded-md bg-secondary" }}
+                activeProps={{
+                  className: "px-4 py-2 text-sm font-semibold text-primary rounded-md bg-secondary",
+                }}
                 activeOptions={{ exact: item.to === "/" }}
               >
                 {item.label}
               </Link>
             ))}
-            <a
-              href="tel:777808071"
-              className="ml-3 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-accent transition-colors shadow-sm"
+            <Link
+              to="/kontakt"
+              className="ml-3 inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-accent transition-colors shadow-sm"
             >
-              <Phone className="h-4 w-4" />
-              777 808 071
-            </a>
+              Kontakt
+            </Link>
           </nav>
 
           <button
@@ -79,19 +79,22 @@ export function Header() {
                   to={item.to}
                   onClick={() => setOpen(false)}
                   className="px-4 py-3 text-base font-medium text-foreground hover:bg-secondary rounded-md"
-                  activeProps={{ className: "px-4 py-3 text-base font-semibold text-primary bg-secondary rounded-md" }}
+                  activeProps={{
+                    className:
+                      "px-4 py-3 text-base font-semibold text-primary bg-secondary rounded-md",
+                  }}
                   activeOptions={{ exact: item.to === "/" }}
                 >
                   {item.label}
                 </Link>
               ))}
-              <a
-                href="tel:777808071"
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-base font-semibold text-primary-foreground"
+              <Link
+                to="/kontakt"
+                onClick={() => setOpen(false)}
+                className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-base font-semibold text-primary-foreground"
               >
-                <Phone className="h-4 w-4" />
-                777 808 071
-              </a>
+                Kontakt
+              </Link>
             </nav>
           </div>
         )}

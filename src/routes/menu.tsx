@@ -8,7 +8,7 @@ export const Route = createFileRoute("/menu")({
       {
         name: "description",
         content:
-          "Aktuální denní menu Bistra Apetit v Českém Těšíně. Objednávky telefonicky do 10:00, rozvoz po městě zdarma nad 100 Kč.",
+          "Aktuální denní menu Bistra Apetit v Českém Těšíně. Objednávky telefonicky do 11:00, rozvoz po městě zdarma nad 100 Kč.",
       },
       { property: "og:title", content: "Denní menu — Bistro Apetit" },
       {
@@ -55,7 +55,7 @@ function MenuPage() {
                   <a href="tel:777808071" className="text-primary font-semibold hover:underline">
                     777 808 071
                   </a>{" "}
-                  do <strong>10:00</strong> téhož dne, nebo online přes Meníčka.cz. Děkujeme za
+                  do <strong>11:00</strong> téhož dne, nebo online přes Meníčka.cz. Děkujeme za
                   pochopení.
                 </p>
               </div>
