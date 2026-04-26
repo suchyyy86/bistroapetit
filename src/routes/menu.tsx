@@ -5,9 +5,17 @@ export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
       { title: "Denní menu — Bistro Apetit, Český Těšín" },
-      { name: "description", content: "Aktuální denní menu Bistra Apetit v Českém Těšíně. Objednávky telefonicky do 10:00, rozvoz po městě zdarma nad 100 Kč." },
+      {
+        name: "description",
+        content:
+          "Aktuální denní menu Bistra Apetit v Českém Těšíně. Objednávky telefonicky do 10:00, rozvoz po městě zdarma nad 100 Kč.",
+      },
       { property: "og:title", content: "Denní menu — Bistro Apetit" },
-      { property: "og:description", content: "Aktuální jídelní lístek a denní menu Bistra Apetit. Objednejte si telefonicky nebo online." },
+      {
+        property: "og:description",
+        content:
+          "Aktuální jídelní lístek a denní menu Bistra Apetit. Objednejte si telefonicky nebo online.",
+      },
     ],
   }),
   component: MenuPage,
@@ -19,8 +27,12 @@ function MenuPage() {
       {/* HEADER */}
       <section className="bg-secondary/40 border-b border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <span className="text-sm font-semibold tracking-widest uppercase text-accent">Jídelní lístek</span>
-          <h1 className="mt-3 font-display text-5xl sm:text-6xl font-bold text-foreground">Denní menu</h1>
+          <span className="text-sm font-semibold tracking-widest uppercase text-accent">
+            Jídelní lístek
+          </span>
+          <h1 className="mt-3 font-display text-5xl sm:text-6xl font-bold text-foreground">
+            Denní menu
+          </h1>
           <p className="mt-4 text-foreground/70 max-w-2xl mx-auto">
             Aktuální jídla na každý den. Data poskytuje portál Meníčka.cz.
           </p>
@@ -34,12 +46,17 @@ function MenuPage() {
             <div className="flex items-start gap-3">
               <AlertCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
               <div>
-                <h2 className="font-display text-xl font-semibold text-foreground">Důležité informace pro objednávky</h2>
+                <h2 className="font-display text-xl font-semibold text-foreground">
+                  Důležité informace pro objednávky
+                </h2>
                 <p className="mt-2 text-foreground/80 leading-relaxed">
-                  Upozorňujeme, že jídel se vaří pouze <strong>omezené množství</strong>, proto
-                  je lepší si menu objednat — telefonicky na čísle{" "}
-                  <a href="tel:777808071" className="text-primary font-semibold hover:underline">777 808 071</a>{" "}
-                  do <strong>10:00</strong> téhož dne, nebo online přes Meníčka.cz. Děkujeme za pochopení.
+                  Upozorňujeme, že jídel se vaří pouze <strong>omezené množství</strong>, proto je
+                  lepší si menu objednat — telefonicky na čísle{" "}
+                  <a href="tel:777808071" className="text-primary font-semibold hover:underline">
+                    777 808 071
+                  </a>{" "}
+                  do <strong>10:00</strong> téhož dne, nebo online přes Meníčka.cz. Děkujeme za
+                  pochopení.
                 </p>
               </div>
             </div>
@@ -78,17 +95,13 @@ function MenuPage() {
           </div>
           <div className="rounded-2xl overflow-hidden border border-border bg-card shadow-sm">
             <iframe
-              src="https://www.menicka.cz/4932-bistro-apetit.html"
+              src="https://www.menicka.cz/api/iframe/?id=4932"
               title="Denní menu Bistro Apetit – Meníčka.cz"
               className="w-full bg-white"
               style={{ height: "1400px", border: 0 }}
               loading="lazy"
             />
           </div>
-          <p className="mt-3 text-xs text-muted-foreground text-center">
-            Data poskytuje portál{" "}
-            <a href="https://www.menicka.cz/4932-bistro-apetit.html" target="_blank" rel="noopener noreferrer" className="underline">Meníčka.cz</a>
-          </p>
         </div>
       </section>
 
@@ -100,14 +113,24 @@ function MenuPage() {
               Informace o mimosoudním řešení spotřebitelských sporů
             </summary>
             <div className="mt-4 text-sm text-foreground/70 leading-relaxed space-y-3">
-              <p className="font-semibold">Dle znění zákona o ochraně spotřebitele 634/1992, §14 odstavec 1</p>
+              <p className="font-semibold">
+                Dle znění zákona o ochraně spotřebitele 634/1992, §14 odstavec 1
+              </p>
               <p>
-                (1) Prodávající informuje spotřebitele jasným, srozumitelným a snadno
-                dostupným způsobem o subjektu mimosoudního řešení spotřebitelských sporů,
-                který je pro daný typ nabízeného, prodávaného, poskytovaného nebo
-                zprostředkovaného výrobku nebo služby věcně příslušný. Informace musí
-                zahrnovat též internetovou adresu tohoto subjektu. Příslušným subjektem
-                je Česká obchodní inspekce (<a href="https://www.coi.cz" target="_blank" rel="noopener noreferrer" className="underline">www.coi.cz</a>).
+                (1) Prodávající informuje spotřebitele jasným, srozumitelným a snadno dostupným
+                způsobem o subjektu mimosoudního řešení spotřebitelských sporů, který je pro daný
+                typ nabízeného, prodávaného, poskytovaného nebo zprostředkovaného výrobku nebo
+                služby věcně příslušný. Informace musí zahrnovat též internetovou adresu tohoto
+                subjektu. Příslušným subjektem je Česká obchodní inspekce (
+                <a
+                  href="https://www.coi.cz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  www.coi.cz
+                </a>
+                ).
               </p>
             </div>
           </details>
