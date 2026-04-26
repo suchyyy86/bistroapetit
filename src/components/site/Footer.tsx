@@ -67,7 +67,18 @@ export function Footer() {
 
         <div className="mt-12 pt-6 border-t border-background/15 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-background/60">
           <p>© {new Date().getFullYear()} Bistro Apetit. Všechna práva vyhrazena.</p>
-          <p>Domácí kuchyně z Českého Těšína</p>
+          <p>
+            Web vytvořila firma{" "}
+            <a
+              href="https://zonetic.cz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-background/80 hover:text-background underline underline-offset-2"
+            >
+              zonetic.cz
+            </a>
+            .
+          </p>
         </div>
       </div>
     </footer>
